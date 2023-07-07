@@ -1,11 +1,17 @@
 const router = require('express').Router();
-const api_router = require('./api_router');
 
-router.use('/api', api_router);
+// Controllers
+const home = require('../controllers/home_controller');
+const notFound = require('../controllers/notFound_controller');
+
+// Home page
+router.get('/', async (req, res) => {
+    home(req, res);
+});
 
 // Page not found
 router.use((req, res) => {
-    res.send("<h1>404</h1>")
+    notFound(req, res);
 });
 
 module.exports = router;
