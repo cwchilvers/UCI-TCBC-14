@@ -1,115 +1,22 @@
 [
     {
-        "title": "Rad Blog Post",
-        "user": "chadmin",
-        "date": "7/9/2023",
-        "content": "This is a rad blog post.",
-        "comments": [
-            {
-                "user": "XxX_n00bSlayer_XxX",
-                "date": "7/9/2023",
-                "content": "this suxx lol u r a n00b"
-            },
-            {
-                "user": "swagmaster420",
-                "date": "7/11/2023",
-                "content": "first"
-            }
-        ]
+        "title": "First Blog Post",
+        "content": "This is the content of the first blog post."
     },
     {
-        "title": "I have learned time travel",
-        "user": "the_time_lord",
-        "date": "12/02/3051",
-        "content": "Listen up, you pathetic, insignificant worms! Prepare to witness the wrath of the time-traveling overlord as I descend upon your feeble existence. Your online presence is nothing but a pitiful speck in the vast abyss of my dominance. I will shatter your feeble arguments, annihilate your feeble intellects, and leave you quivering in the wake of my unrelenting hostility. Tremble, you wretched fools, for the ultimate harbinger of destruction has arrived to unleash a relentless onslaught of aggression upon your feeble minds. Brace yourselves for the relentless assault that is about to befall you, as I unleash the fury of my time-traveling powers, obliterating your pitiful existence from the annals of cyberspace!",
-        "comments": [
-            {
-                "user": "bob2971",
-                "date": "7/12/2023",
-                "content": "meds now"
-            },
-            {
-                "user": "boomer@earthlink.net",
-                "date": "7/12/2023",
-                "content": "wait this isnt ask jeeves"
-            }
-        ]
+        "title": "Second Blog Post",
+        "content": "This is the content of the second blog post."
     },
     {
-        "title": "this blog post is bussin fr fr ong no cap",
-        "user": "zoomer",
-        "date": "7/12/2023",
-        "content": "Fourscore and seven years ago our fathers brought forth, on this continent, a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived, and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting-place for those who here gave their lives, that that nation might live. It is altogether fitting and proper that we should do this. But, in a larger sense, we cannot dedicate, we cannot consecrate—we cannot hallow—this ground. The brave men, living and dead, who struggled here, have consecrated it far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us—that from these honored dead we take increased devotion to that cause for which they here gave the last full measure of devotion—that we here highly resolve that these dead shall not have died in vain—that this nation, under God, shall have a new birth of freedom, and that government of the people, by the people, for the people, shall not perish from the earth.",
-        "comments": [
-            {
-                "user": "boomer@earthlink.net",
-                "date": "7/12/2023",
-                "content": "this post goes hard ngl\n\n- Sent from my Jitterbug phone"
-            },
-            {
-                "user": "swagmaster420",
-                "date": "7/18/2023",
-                "content": "first"
-            }
-        ]
+        "title": "Third Blog Post",
+        "content": "This is the content of the third blog post."
     },
     {
-        "title": "I CAN HAS CHEEZBURGER?",
-        "user": "t3hPeNgU1NoFd00m",
-        "date": "7/13/2023",
-        "content": "Lolcats were never funny. They were often formulaic, where a cute picture of a cat was combined with a caption using intentionally misspelled or grammatically incorrect text. The humor was also forced. The captions in lolcats often relied on intentional misspellings or grammatical errors for comedic effect. While some people may find this type of humor amusing, for me, it felt forced and contrived. I prefer humor that arises naturally or cleverly from the situation or dialogue, rather than relying on intentional mistakes for laughs.",
-        "comments": [
-            {
-                "user": "based_goober",
-                "date": "7/13/2023",
-                "content": "keep yourself safe my guy"
-            },
-            {
-                "user": "fed_agent",
-                "date": "7/14/2023",
-                "content": "a package has been delivered to your address. please open it immediately"
-            },
-            {
-                "user": "fed_agent",
-                "date": "7/14/2023",
-                "content": "*in minecraft"
-            }
-        ]
+        "title": "Fourth Blog Post",
+        "content": "This is the content of the fourth blog post."
     },
     {
-        "title": "New Rollator Walker with RGB",
-        "user": "boomer@earthlink.net",
-        "date": "7/14/2023",
-        "content": "My wife, Barbara, bought me a new rollator walker for my birthday. It has RGB lighting and a built-in speaker to plug in my Zune. The specs include an Intel Pentium II processor and Creative Labs Sound Blaster plus a whopping 16KB of RAM. Both the grips and seat on this doohickey provide haptic feedback for that immersive experience. I find it very swell. I cannot wait to show this off to my friends at the retirement home. Okay Barb how do I submit a post to my wall again.",
-        "comments": [
-            {
-                "user": "cr4zy_cr4ckr",
-                "date": "7/14/2023",
-                "content": "rollator? i hardly know her! HUHUHUHUHU"
-            }
-        ]
-    },
-    {
-        "title": "Execute Order 66",
-        "user": "chadmin",
-        "date": "7/15/2023",
-        "content": "This site sucks. All of you are n00bs. I'm shutting it down. As of today, all users are banned. Goodbye.",
-        "comments": [
-            {
-                "user": "d4rth_v4d3r",
-                "date": "7/15/2023",
-                "content": "nooooooooooooooooooooooooooooooooooooooo"
-            },
-            {
-                "user": "cl00less_n00bless",
-                "date": "7/15/2023",
-                "content": "why are we still here? just to suffer?"
-            },
-            {
-                "user": "swagmaster420",
-                "date": "2/23/2072",
-                "content": "first"
-            }
-        ]
+        "title": "Fifth Blog Post",
+        "content": "This is the content of the fifth blog post."
     }
 ]

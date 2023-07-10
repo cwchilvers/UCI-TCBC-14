@@ -1,4 +1,3 @@
-// Render home page
 module.exports = async (req, res) => {
     try {
         const posts = await Post.find();                                // Retrieve blog posts from database
