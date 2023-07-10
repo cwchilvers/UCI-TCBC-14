@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
             raw: true,          // Retrieve plain data instead of Sequelize instances
             nest: true          // This fixed username not passing through to the view
         });
-        res.render('home', { title, posts }); // Render the 'home' view and pass the posts data to the view
+        res.render('home', { title, posts }); // Render the 'home' view and pass the posts data and title to the view
     } catch (error) {
         res.status(500).json({ error: 'Failed to retrieve posts' });    // Send error message to client
     }

@@ -1,0 +1,14 @@
+{{#unless user}}
+<div class="login-container">
+    <div class="login-form">
+        <label for="username-login">Username:</label>
+        <input type="text" id="username-login"/>
+        <label for="password-login">Password:</label>
+        <input type="password" id="password-login"/>
+        <button id="login-btn">Login</button>
+    </div>
+    <div>
+        <p>Don't have an account? <a href="/sign-up">Sign-up</a> instead.</p>
+    </div>
+</div>
+{{/unless}}

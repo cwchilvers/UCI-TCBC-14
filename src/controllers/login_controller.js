@@ -1,4 +1,4 @@
-// Render login page
 module.exports = async (req, res) => {
-    res.render('login');
+    const title = 'BTB | Login';    // Set the page title
+    res.render('login', { title }); // Render login page with title
 };

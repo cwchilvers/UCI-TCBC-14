@@ -4,7 +4,12 @@
         <ul>
             <li><a href="./">Home</a></li>
             <li><a href="/dashboard">Dashboard</a></li>
+            {{#unless user}}
             <li><a href="/login">Login</a></li>
+            {{/unless}}
+            {{#if user}}
+            <li><a href="/logout">Logout</a></li>
+            {{/if}}
         </ul>
     </nav>
-<header>
+</header>
