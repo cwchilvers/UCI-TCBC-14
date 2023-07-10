@@ -1,14 +1,14 @@
 [
     {
-        "comment": "This is a comment on a post."
+        "content": "This is a comment on a post."
     },
     {
-        "comment": "Another comment on another post."
+        "content": "Another comment on another post."
     },
     {
-        "comment": "A comment on a post once again."
+        "content": "A comment on a post once again."
     },
     {
-        "comment": "A comment on yet another post."
+        "content": "A comment on yet another post."
     }
 ]
