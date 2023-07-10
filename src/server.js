@@ -7,6 +7,7 @@ const path = require('path');
 
 // Set up database
 const sequelize = require('./config/connection');
+const { partial } = require('lodash');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Set up server
@@ -16,15 +17,9 @@ const PORT = process.env.PORT || 3000;
 // Set up sessions with cookies
 const sess = {
     secret: 'Super secret secret',
-    cookie: {
-        maxAge: 300000,
-        httpOnly: true,
-        secure: false,
-        sameSite: 'strict',
-    },
+    cookie: {},
     resave: false,
     saveUninitialized: true,
-    // Set up session storage
     store: new SequelizeStore({
         db: sequelize
     })

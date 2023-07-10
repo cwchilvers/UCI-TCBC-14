@@ -6,9 +6,7 @@ const notFound = require('../controllers/notFound_controller');
 
 // Home page
 router.get('/', async (req, res) => {
-    console.log('get request to /');
-
-    home(req, res);
+    res.render('layouts/main');
 });
 
 // Page not found
