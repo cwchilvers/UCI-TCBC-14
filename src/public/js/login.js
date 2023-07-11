@@ -1,10 +1,5 @@
 const loginFormHandler = async (event) => {
-    console.log("loginFormHandler: before prevent default");
-
     event.preventDefault();
-    
-    console.log("loginFormHandler: before prevent default");
-
 
     const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
