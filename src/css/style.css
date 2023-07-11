@@ -1,4 +1,5 @@
 body {
-    color: red;
-    background-color: aqua;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(245, 239, 222);
+    color: rgb(41, 41, 41);
 }
