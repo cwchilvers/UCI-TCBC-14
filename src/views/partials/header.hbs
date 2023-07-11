@@ -5,7 +5,7 @@
             <li><a href="./">Home</a></li>
             <li><a href="/dashboard">Dashboard</a></li>
             {{!-- Show "logout" if user is logged in --}}
-            {{#if user}}
+            {{#if loggedIn}}
             <li><a href="/logout">Logout</a></li>
             {{!-- Or else show "login" --}}
             {{else}}

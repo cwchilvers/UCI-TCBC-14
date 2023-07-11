@@ -1,7 +1,12 @@
-module.exports = async (event) => {
-    event.preventDefault();
+const loginFormHandler = async (event) => {
+    console.log("loginFormHandler: before prevent default");
 
-    const username = document.querySelector('#email-login').value.trim();
+    event.preventDefault();
+    
+    console.log("loginFormHandler: before prevent default");
+
+
+    const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
     if (username && password) {

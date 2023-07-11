@@ -15,15 +15,13 @@ module.exports = async (req, res) => {
         // Format the date for each post
         const formattedPosts = posts.map(post => ({
             ...post,
-            createdAt: {
-                formattedTime: format_time(post.createdAt),
-                formattedDate: format_date(post.createdAt)
+            createdAt: {                                        // Create object for createdAt attribute
+                formattedTime: format_time(post.createdAt),     // Format the time
+                formattedDate: format_date(post.createdAt)      // Format the date
             }
         }));
-        
-        console.log(formattedPosts);
 
-        res.render('home', { title, posts: formattedPosts }); // Render the 'home' view and pass the posts data and title to the view
+        res.render('home', { title, posts: formattedPosts, loggedIn: req.session.loggedIn }); // Render the 'home' view and pass the posts data and title to the view
     } catch (error) {
         res.status(500).json({ error: 'Failed to retrieve posts' });    // Send error message to client
     }
