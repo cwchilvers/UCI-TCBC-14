@@ -34,6 +34,7 @@ const hbs = exphbs.create({
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname,"css"))) // Set static folder for express
 
 // Set up middleware
 app.use(express.json());

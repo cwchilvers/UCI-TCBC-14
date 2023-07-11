@@ -4,11 +4,12 @@
         <ul>
             <li><a href="./">Home</a></li>
             <li><a href="/dashboard">Dashboard</a></li>
-            {{#unless user}}
-            <li><a href="/login">Login</a></li>
-            {{/unless}}
+            {{!-- Show "logout" if user is logged in --}}
             {{#if user}}
             <li><a href="/logout">Logout</a></li>
+            {{!-- Or else show "login" --}}
+            {{else}}
+            <li><a href="/login">Login</a></li>
             {{/if}}
         </ul>
     </nav>

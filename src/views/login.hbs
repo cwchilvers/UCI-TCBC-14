@@ -1,4 +1,13 @@
-{{#unless user}}
+{{!-- Display all of user's posts if logged in --}}
+{{#if loggedIn}}
+<div class="posts-container">
+    {{#each posts}}
+        {{> post}}
+    {{/each}}
+</div>
+
+{{!-- Or else ask user to login/sign-up --}}
+{{else}}
 <div class="login-container">
     <div class="login-form">
         <label for="username-login">Username:</label>
@@ -11,4 +20,4 @@
         <p>Don't have an account? <a href="/sign-up">Sign-up</a> instead.</p>
     </div>
 </div>
-{{/unless}}
+{{/if}}
