@@ -6,10 +6,9 @@ module.exports = async (req, res) => {
             return res.redirect('/login');
         }
 
-        const userId = req.session.userId; // Get the currently logged-in user ID from the session
         const title = 'BTB | New Post'; // Set the page title
 
-        res.render('newPost', { title, loggedIn: req.session.loggedIn, userId });
+        res.render('newPost', { title, loggedIn: req.session.loggedIn});
     } catch (error) {
         res.status(500).json({ error: 'Failed to retrieve posts' });    // Send error message to client
     }
