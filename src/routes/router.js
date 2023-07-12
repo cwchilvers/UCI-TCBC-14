@@ -34,7 +34,7 @@ router.get('/sign-up', async (req, res) => {
 });
 
 // Post page
-router.get('/post/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     post(req, res);
 });
 
