@@ -1,50 +1,47 @@
 :root {
-
     --white: rgb(245, 239, 222);
     --black: rgb(70, 65, 65);
     --rust: rgb(182, 85, 40);
     --darkRust: rgb(117, 61, 36);
 }
 
-body {
+html {
+    background-color: rgb(44, 40, 40); color: var(--black);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(44, 40, 40);
-    color: var(--black);
+    width: 100vw;
+    display: flex; justify-content: center;
 }
 
 a { color: inherit; } 
 
 /* Header */
 header {
-    background-color: var(--rust);
+    background-color: var(--rust); color: var(--white);
     display: flex; align-items: center; justify-content: center;
     height: 80px; width: 100%;
-    color: var(--white);
 }
 
 #header-container {
     display: flex; align-items: center; justify-content: space-between;
-    width: 100%;
-    max-width: 1150px;
+    width: 100%; max-width: 1150px;
 }
 
 h1 {
     display: flex; align-items: center;
+    height: 80px; width: 25%;
     padding-left: 20px;
-    height: 80px;
-    width: 25%;
 }
 
+/* Navigation */
 nav {
-    width: 49.5%;
-    height: 80px;
+    height: 80px; width: 49.5%;
     display: flex; align-items: center; justify-content: center;
 
 }
 
 nav li {
-    list-style: none;
     display: inline-block;
+    list-style: none;
     padding: 0 20px;
 }
 
@@ -52,34 +49,26 @@ nav a {
     font-size: 18px;
 }
 
+/* New Post */
 #new-post-container {
     display: flex; align-items: center; justify-content: right;
-    display: flex; align-items: center;
-    height: 80px;
-    width: 25%;
+    height: 80px; width: 25%;
 }
 
 #new-post {
     background-color: var(--darkRust);
-    width: 110px;
-    height: 60px;
     border-radius: 10px;
-    text-decoration: none;
     display: flex; align-items: center; justify-content: center;
     font-weight: bold;
+    text-decoration: none;
+    height: 60px; width: 110px;
     margin-right: 20px;
 }
 
+/* Body */
 body {
-    
-    width: 100vw;
-    display: flex; justify-content: center;
-}
-
-#body-container {
     background-color: var(--white);
-    width: 1200px;
-    min-height: 100vh;
+    min-height: 100vh; width: 1200px;
 }
 
 #posts-container {

@@ -22,7 +22,12 @@ module.exports = async (req, res) => {
         }));
         
         // Render page and pass data to view
-        res.render('home', { title: 'BTB | Home', posts: formattedPosts, loggedIn: req.session.loggedIn });
+        res.render('home', { 
+            title: 'BTB | Home', 
+            loggedIn: req.session.loggedIn,
+            posts: formattedPosts
+        });
+
     } catch (error) {
         // Send error message to client
         res.status(500).json({ error: 'Failed to retrieve posts' }); 

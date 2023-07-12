@@ -3,21 +3,18 @@ const sequelize = require('../config/connection');
 
 class Comment extends Model {}
 
-Comment.init(
+module.exports = Comment.init(
     {
-        // id column
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        // content column
         content: {
             type: DataTypes.TEXT,
             allowNull: false
         },
-        // user_id column (references user model's id column)
         user_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -25,7 +22,6 @@ Comment.init(
                 key: 'id'
             }
         },
-        // post_id column (references post model's id column)
         post_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -34,7 +30,6 @@ Comment.init(
             }
         }
     },
-    // configuration options
     {
         sequelize,
         timestamps: true,
@@ -43,5 +38,3 @@ Comment.init(
         modelName: 'comment'
     }
 );
-
-module.exports = Comment;

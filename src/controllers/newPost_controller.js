@@ -6,7 +6,11 @@ module.exports = async (req, res) => {
         }
 
         // Render page and pass data to view
-        res.render('newPost', { title: 'BTB | New Post', loggedIn: req.session.loggedIn});
+        res.render('newPost', { 
+            title: 'BTB | New Post', 
+            loggedIn: req.session.loggedIn
+        });
+        
     } catch (error) {
         // Send error message to client
         res.status(500).json({ error: 'Failed to load Create New Post' });

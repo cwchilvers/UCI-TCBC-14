@@ -28,7 +28,12 @@ module.exports = async (req, res) => {
         })); 
 
         // Render page and pass data to view
-        res.render('dashboard', { title: 'BTB | Dashboard', posts: formattedPosts, loggedIn: req.session.loggedIn });
+        res.render('dashboard', { 
+            title: 'BTB | Dashboard',
+            loggedIn: req.session.loggedIn,
+            posts: formattedPosts
+        });
+
     } catch (error) {
         // Send error message to client
         res.status(500).json({ error: 'Failed to retrieve posts' });

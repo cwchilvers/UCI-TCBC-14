@@ -42,7 +42,13 @@ module.exports = async (req, res) => {
         }));
 
         // Render page and pass data to view
-        res.render('singlePost', { title: 'BTB | ' + post.title, post: formattedPost, comments: formattedComments, loggedIn: req.session.loggedIn });
+        res.render('singlePost', { 
+            title: 'BTB | ' + post.title, 
+            loggedIn: req.session.loggedIn,
+            post: formattedPost,
+            comments: formattedComments, 
+        });
+
     } catch (error) {
         // Send error message to client
         res.status(500).json({ error: 'Failed to retrieve post' });

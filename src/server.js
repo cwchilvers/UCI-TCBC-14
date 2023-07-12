@@ -7,7 +7,6 @@ const path = require('path');
 
 // Set up database
 const sequelize = require('./config/connection');
-const { partial } = require('lodash');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Set up server
@@ -31,15 +30,17 @@ const hbs = exphbs.create({
     extname: 'hbs',
     partialsDir: path.join(__dirname, 'views', 'partials')
 });
-app.engine('hbs', hbs.engine);
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname,"public"))) // Set static folder for express
+app
+    .engine('hbs', hbs.engine)
+    .set('view engine', 'hbs')
+    .set('views', path.join(__dirname, "views"))
+    .use(express.static(path.join(__dirname,"public"))); // Set static folder for express
 
 // Set up middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(router);
+app
+    .use(express.json())
+    .use(express.urlencoded({ extended: true }))
+    .use(router);
 
 // Start server
 sequelize.sync({ force: false }).then(() => {

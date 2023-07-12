@@ -16,12 +16,13 @@ const controllers = {
 };
 
 // Routes
-router.get('/', controllers.home);
-router.get('/dashboard', controllers.dashboard);
-router.get('/login', controllers.login);
-router.get('/sign-up', controllers.signUp);
-router.get('/:id', controllers.post);
-router.get('/new-post', controllers.newPost);
-router.use(controllers.notFound);
+router
+    .get('/', controllers.home)
+    .get('/dashboard', controllers.dashboard)
+    .get('/login', controllers.login)
+    .get('/sign-up', controllers.signUp)
+    .get('/:id', controllers.post)
+    .get('/new-post', controllers.newPost)
+    .use(controllers.notFound);
 
 module.exports = router;
