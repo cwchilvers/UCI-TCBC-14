@@ -1,18 +1,27 @@
 <header>
-    <h1>Basic Tech Blog</h1>
-    <nav>
-        <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
-            
-            {{!-- Show "logout" if user is logged in --}}
+    <div id="header-container">
+        <h1>Basic Tech Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                
+                {{!-- Show "logout" if user is logged in --}}
+                {{#if loggedIn}}
+                <li><a href="/logout" id="logout">Logout</a></li>
+                <script src="/js/logout.js"></script>
+                {{!-- Or else show "login" --}}
+                {{else}}
+                <li><a href="/login">Login</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+
+        <div id="new-post-container">
+            {{!-- Show "new post" if user is logged in --}}
             {{#if loggedIn}}
-            <li><a href="/logout" id="logout">Logout</a></li>
-            <script src="/js/logout.js"></script>
-            {{!-- Or else show "login" --}}
-            {{else}}
-            <li><a href="/login">Login</a></li>
+            <a id="new-post" href="/new-post">New Post</a>
             {{/if}}
-        </ul>
-    </nav>
+        <div>
+    </div>
 </header>
