@@ -5,8 +5,8 @@ const { Post } = require('../../models/models');
 router.post('/', async (req, res) => {
     try {
         const dbPostData = await Post.create({
-        title: req.body.title,
-        content: req.body.content,
+            title: req.body.title,
+            content: req.body.content,
         });
 
         res.status(200).json(dbPostData);
