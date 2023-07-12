@@ -3,21 +3,19 @@ const { format_time, format_date } = require('../utils/formatDate');
 
 module.exports = async (req, res) => {
     try {
+        // If user isn't logged in, redirect to login page
         if (!req.session.loggedIn) {
-            // If user is not logged in, redirect to the login page
             return res.redirect('/login');
         }
 
-        const title = 'BTB | Dashboard';    // Set the page title
-        const userId = req.session.userId;  // Get the user id from the session
-
+        // Get all posts by the logged in user, order by latest first
         const posts = await Post.findAll({
-            where: { user_id: userId },  // Get all posts where userId matches the session's userId
-            include: User,      // Include the User model to get the author information
-            order: [['createdAt', 'DESC']],                         // Order posts by creation date in descending order
-            attributes: ['id', 'title', 'content', 'createdAt'],    // Add attributes to retrieve from the Post model
-            raw: true,          // Retrieve plain data instead of Sequelize instances
-            nest: true          // This fixed username not passing through to the view
+            where: { user_id: req.session.userId }, 
+            include: User,
+            order: [['createdAt', 'DESC']], 
+            attributes: ['id', 'title', 'content', 'createdAt'],
+            raw: true,  
+            nest: true   
         });
 
         // Format the date for each post
@@ -27,10 +25,12 @@ module.exports = async (req, res) => {
                 formattedTime: format_time(post.createdAt),     // Format the time
                 formattedDate: format_date(post.createdAt)      // Format the date
             }
-        }));;
+        })); 
 
-        res.render('dashboard', { title, posts: formattedPosts, loggedIn: req.session.loggedIn }); // Render the 'dashboard' view and pass the posts data and title to the view
+        // Render page and pass data to view
+        res.render('dashboard', { title: 'BTB | Dashboard', posts: formattedPosts, loggedIn: req.session.loggedIn });
     } catch (error) {
-        res.status(500).json({ error: 'Failed to retrieve posts' });    // Send error message to client
+        // Send error message to client
+        res.status(500).json({ error: 'Failed to retrieve posts' });
     }
 };

@@ -1,15 +1,14 @@
-// Create a new post
 module.exports = async (req, res) => {
     try {
+        // If user isn't logged in, redirect to login page
         if (!req.session.loggedIn) {
-            // If user is not logged in, redirect to the login page
             return res.redirect('/login');
         }
 
-        const title = 'BTB | New Post'; // Set the page title
-
-        res.render('newPost', { title, loggedIn: req.session.loggedIn});
+        // Render page and pass data to view
+        res.render('newPost', { title: 'BTB | New Post', loggedIn: req.session.loggedIn});
     } catch (error) {
-        res.status(500).json({ error: 'Failed to retrieve posts' });    // Send error message to client
+        // Send error message to client
+        res.status(500).json({ error: 'Failed to load Create New Post' });
     }
 };

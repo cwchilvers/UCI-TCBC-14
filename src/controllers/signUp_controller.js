@@ -1,9 +1,9 @@
 module.exports = async (req, res) => {
+    // If user is logged in, redirect to home page
     if (req.session.loggedIn) {
-        res.redirect('/dashboard');
-        return;
+        return res.redirect('/');
     } else {
-        const title = 'BTB | Sign-Up';      // Set the page title
-        res.render('signUp', { title });    // Render login page with title
+        // Render page and pass data to view
+        res.render('signUp', { title: 'BTB | Sign-Up' });
     }
 };

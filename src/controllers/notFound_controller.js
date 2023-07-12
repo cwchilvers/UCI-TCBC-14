@@ -1,3 +1,4 @@
 module.exports = (req, res) => {
-    res.render('notFound', { title: 'BTB: Page Not Found' }); // Render 404 page
+    // Render page and pass data to view
+    res.render('notFound', { title: 'BTB: Page Not Found' });
 }
