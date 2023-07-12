@@ -11,6 +11,7 @@ const login = require('../controllers/login_controller');
 const signUp = require('../controllers/signUp_controller');
 const notFound = require('../controllers/notFound_controller');
 const newPost = require('../controllers/newPost_controller');
+const post = require('../controllers/post_controller');
 
 // Home page
 router.get('/', async (req, res) => {
@@ -30,6 +31,11 @@ router.get('/login', async (req, res) => {
 // Sign-up page
 router.get('/sign-up', async (req, res) => {
     signUp(req, res);
+});
+
+// Post page
+router.get('/post/:id', async (req, res) => {
+    post(req, res);
 });
 
 // New post page

@@ -1,0 +1,16 @@
+{{!-- Viewing a single post with comments--}}
+<div id="single-post-container">
+    <div class="blog-post">
+        <h2 class="blog-post-title">{{post.title}}</h2>
+        <p class="blog-post-meta">Posted {{post.createdAt.formattedDate}} at {{post.createdAt.formattedTime}} by {{post.user.username}}</p>
+        <p>{{post.content}}</p>
+    </div>
+    {{#if loggedIn}}
+        {{!-- {{> newComment}} --}}
+    {{else}}
+        <p>You must be logged in to post a comment.</p>
+    {{/if}}
+    {{#each comments}}
+        {{> comment}}
+    {{/each}}
+</div>
