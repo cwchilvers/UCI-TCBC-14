@@ -1,14 +1,18 @@
-<div class="login-container">
+<div id="login-container">
     <form class="sign-up-form">
-        <label for="username-sign-up">Username:</label>
-        <input type="text" id="username-sign-up"/>
-        <label for="password-sign-up">Password:</label>
-        <input type="password" id="password-sign-up"/>
-        <button id="sign-up-btn">Sign-up</button>
+        <div class="login-row">
+            <label for="username-sign-up">Username:</label>
+            <input type="text" id="username-sign-up"/>
+        </div>
+        <div class="login-row">
+            <label for="password-sign-up">Password:</label>
+            <input type="password" id="password-sign-up"/>
+        </div>
+        <div>            
+            <button id="sign-up-btn">Sign-up</button>
+            <p>Don't have an account? <a href="/login" class="underline">Log in</a> instead.</p>
+        </div>
     </form>
-    <div>
-        <p>Don't have an account? <a href="/login" class="underline">Log in</a> instead.</p>
-    </div>
 </div>
 
 <script src="/js/signUp.js"></script>

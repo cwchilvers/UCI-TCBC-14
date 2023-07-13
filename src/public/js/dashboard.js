@@ -39,6 +39,13 @@ const editPostHandler = async (event) => {
     }
 };
 
-// Attach the event listener to the #dashboard-container using event delegation
+const viewPostHandler = (event) => {
+    if (event.target.matches('.item-title')) {
+        const postId = event.target.closest('.item').dataset.value;
+        document.location.href = `/post/${postId}`;
+    }
+};
+
 document.querySelector('#dashboard-container').addEventListener('click', deletePostHandler);
 document.querySelector('#dashboard-container').addEventListener('click', editPostHandler);
+document.querySelector('#dashboard-container').addEventListener('click', viewPostHandler);

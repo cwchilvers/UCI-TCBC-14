@@ -224,6 +224,28 @@ textarea {
     padding-left: 20px;
 }
 
+/* Login/Signup */
+#login-container {
+    background-color: var(--darkWhite);
+    border-width: 1px; border-style: solid; border-color: var(--black);
+    height: 200px; width: 400px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.login-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.login-form label {
+    font-weight: bold;
+}
+
+.login-form :nth-child(3) {
+    padding-top: 15px;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+}
 
 /* Body */
 body {
