@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
         }
 
         // Render the edit post page and pass the post data to the view
-        res.render('posts/editPost', { 
+        res.render('editPost', { 
             title: 'BTB | Edit Post',
             id: req.params.id,
             loggedIn: req.session.loggedIn,
