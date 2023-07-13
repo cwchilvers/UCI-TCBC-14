@@ -21,8 +21,8 @@ router
     .get('/dashboard', controllers.dashboard)
     .get('/login', controllers.login)
     .get('/sign-up', controllers.signUp)
-    .get('/:id', controllers.post)
     .get('/new-post', controllers.newPost)
+    .get('/:id', controllers.post)
     .use(controllers.notFound);
 
 module.exports = router;
