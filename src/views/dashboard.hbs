@@ -1,5 +1,9 @@
 <h2>Your Dashboard</h2>
 
-{{#each posts}}
-    {{> dashboardItem}}
-{{/each}}
+<div id="dashboard-container">
+    {{#each posts}}
+        {{> dashboardItem}}
+    {{/each}}
+</div>
+
+<script src="/js/dashboard.js"></script>

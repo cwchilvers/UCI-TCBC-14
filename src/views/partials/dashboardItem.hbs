@@ -5,11 +5,9 @@
             <a href="/{{id}}"><h2>{{title}}</h2></a>
         </div>
         <div class="item-buttons">
-            <a><img src="img/edit.svg"></a>
-            <a><img src="img/delete.svg"></a>
+            <a class="edit-button"><img src="img/edit.svg"></a>
+            <a class="delete-button" data-post-id="{{id}}"><img src="img/delete.svg"></a>
         </div>
     </div>
     <p class="item-info">Posted {{createdAt.formattedDate}} at {{createdAt.formattedTime}}</p>
 </div>
-
-<script></script>
