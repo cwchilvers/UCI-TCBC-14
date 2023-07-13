@@ -68,6 +68,10 @@ nav a {
     font-size: 18px;
 }
 
+#logout {
+    cursor: pointer;
+}
+
 /* New Post */
 #new-post-container {
     display: flex; align-items: center; justify-content: right;
