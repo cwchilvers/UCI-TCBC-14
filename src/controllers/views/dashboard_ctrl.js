@@ -31,7 +31,8 @@ module.exports = async (req, res) => {
         res.render('dashboard', { 
             title: 'BTB | Dashboard',
             loggedIn: req.session.loggedIn,
-            posts: formattedPosts
+            posts: formattedPosts,
+            hasPosts: formattedPosts.length > 0  // Check if there are any posts
         });
 
     } catch (error) {

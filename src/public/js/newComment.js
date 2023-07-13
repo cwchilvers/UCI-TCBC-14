@@ -16,7 +16,7 @@ const newCommentHandler = async (event) => {
         alert('Failed to submit new comment.');
     } 
 
-    document.location.replace('/' + post_id); // Refresh page
+    document.location.replace('/post/' + post_id); // Refresh page
 };
 
 document

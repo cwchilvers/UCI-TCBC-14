@@ -1,9 +1,9 @@
-<h2>Your Dashboard</h2>
-
-<div id="dashboard-container">
-    {{#each posts}}
-        {{> dashboardItem}}
-    {{/each}}
-</div>
-
-<script src="/js/dashboard.js"></script>
+{{#if hasPosts}}
+    <div id="dashboard-container">
+        {{#each posts}}
+            {{> dashboardItem}}
+        {{/each}}
+    </div>
+{{else}}
+    <h2>No posts found.</h2>
+{{/if}}

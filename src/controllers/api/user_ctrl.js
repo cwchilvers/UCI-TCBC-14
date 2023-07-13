@@ -8,10 +8,13 @@ module.exports = {
                 username: req.body.username,
                 password: req.body.password,
             });
-        
+
+            // Automatically log in the user
+            req.session.userId = dbUserData.id;
+            req.session.loggedIn = true;
+
             req.session.save(() => {
-                req.session.loggedIn = true;
-                res.status(200).json(dbUserData);
+                res.status(200).json({ user: dbUserData, message: 'You are now logged in!' });
             });
         } catch (err) {
             console.log(err);
