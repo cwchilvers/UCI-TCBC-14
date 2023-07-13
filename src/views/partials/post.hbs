@@ -1,6 +1,6 @@
 <!-- Blog post -->
 <div class="blog-post">
-    <a href="/{{id}}"><h2 class="blog-post-title">{{title}}</h2></a>
+    <div class="blog-post-header"><a href="/{{id}}"><h2>{{title}}</h2></a></div>
     <p class="blog-post-meta">Posted {{createdAt.formattedDate}} at {{createdAt.formattedTime}} by {{user.username}}</p>
-    <p>{{content}}</p>
+    <p class="blog-post-content">{{content}}</p>
 </div>

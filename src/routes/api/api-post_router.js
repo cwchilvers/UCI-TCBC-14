@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { newPost, newComment, getPost } = require('../../handlers/post_handler');
+const { newPost, newComment, getPost } = require('../../controllers/api/post_ctrl');
 
 router
     .post('/', async (req, res) => {newPost(req, res);})        // Create new blog post

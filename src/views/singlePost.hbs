@@ -1,20 +1,19 @@
-{{!-- Single post with comments--}}
-<div id="single-post-container">
-    {{!-- Blog Post --}}
-    <div class="blog-post">
-        <h2 class="blog-post-title">{{post.title}}</h2>
-        <p class="blog-post-meta">Posted {{post.createdAt.formattedDate}} at {{post.createdAt.formattedTime}} by {{post.user.username}}</p>
-        <p>{{post.content}}</p>
-    </div>
+{{!-- Blog Post --}}
+<div class="blog-post">
+    <div class="blog-post-header"><h2 class="blog-post-header">{{post.title}}</h2></div>
+    <p class="blog-post-meta">Posted {{post.createdAt.formattedDate}} at {{post.createdAt.formattedTime}} by {{post.user.username}}</p>
+    <p class="blog-post-content">{{post.content}}</p>
+</div>
 
-    {{!-- Post New Comment --}}
-    {{#if loggedIn}}
-        {{> newComment}}
-    {{else}}
-        <p>You must be <a href="/login">logged in</a> to post a comment.</p>
-    {{/if}}
+{{!-- Post New Comment --}}
+{{#if loggedIn}}
+    {{> newComment}}
+{{else}}
+    <p>You must be <a href="/login">logged in</a> to post a comment.</p>
+{{/if}}
 
-    {{!-- Comments --}}
+{{!-- Comments --}}
+<div class="comments-container">
     {{#each comments}}
         {{> comment}}
     {{/each}}

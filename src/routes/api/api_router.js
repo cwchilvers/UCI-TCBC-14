@@ -2,8 +2,8 @@ const router = require('express').Router();
 
 // Routers
 const routers = {
-    userRouter: require('./api-user_routes'),
-    postRouter: require('./api-post_routes')
+    userRouter: require('./api-user_router'),
+    postRouter: require('./api-post_router')
 }
 
 // Routes

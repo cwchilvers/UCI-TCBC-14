@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { newUser, login, logout } = require('../../handlers/user_handler');
+const { newUser, login, logout } = require('../../controllers/api/user_ctrl');
 
 router
   .post('/', async (req, res) => {newUser(req, res);})    // Create new user

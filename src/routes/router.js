@@ -1,28 +1,28 @@
 const router = require('express').Router();
 
 // API
-const apiRoutes = require('./api/api');
+const apiRoutes = require('./api/api_router');
 router.use('/api', apiRoutes);
 
-// Controllers
-const controllers = {
-    home: require('../controllers/home_controller'),
-    dashboard: require('../controllers/dashboard_controller'),
-    login: require('../controllers/login_controller'),
-    signUp: require('../controllers/signUp_controller'),
-    post: require('../controllers/post_controller'),
-    newPost: require('../controllers/newPost_controller'),
-    notFound: require('../controllers/notFound_controller')
+// View Controllers
+const viewCtrl = {
+    home: require('../controllers/views/home_ctrl'),
+    dashboard: require('../controllers/views/dashboard_ctrl'),
+    login: require('../controllers/views/login_ctrl'),
+    signUp: require('../controllers/views/signUp_ctrl'),
+    post: require('../controllers/views/post_ctrl'),
+    newPost: require('../controllers/views/newPost_ctrl'),
+    notFound: require('../controllers/views/notFound_ctrl')
 };
 
 // Routes
 router
-    .get('/', controllers.home)
-    .get('/dashboard', controllers.dashboard)
-    .get('/login', controllers.login)
-    .get('/sign-up', controllers.signUp)
-    .get('/new-post', controllers.newPost)
-    .get('/:id', controllers.post)
-    .use(controllers.notFound);
+    .get('/', viewCtrl.home)
+    .get('/dashboard', viewCtrl.dashboard)
+    .get('/login', viewCtrl.login)
+    .get('/sign-up', viewCtrl.signUp)
+    .get('/new-post', viewCtrl.newPost)
+    .get('/:id', viewCtrl.post)
+    .use(viewCtrl.notFound);
 
 module.exports = router;

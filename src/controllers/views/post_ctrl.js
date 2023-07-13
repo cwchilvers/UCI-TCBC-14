@@ -1,5 +1,5 @@
-const { Post, User, Comment } = require('../models/models');
-const { format_time, format_date } = require('../utils/formatDate');
+const { Post, User, Comment } = require('../../models/models');
+const { format_time, format_date } = require('../../utils/formatDate');
 
 module.exports = async (req, res) => {
     try {
