@@ -59,6 +59,28 @@ module.exports = {
         }
     },
 
+    // Update blog post
+    updatePost: async (req, res) => {
+        try {
+            const dbPostData = await Post.update(
+                {
+                    title: req.body.title,
+                    content: req.body.content,
+                },
+                {
+                    where: {
+                        id: req.params.id,
+                    },
+                }
+            );
+            
+            res.status(200).json(dbPostData);
+        } catch (err) {
+            console.log(err);
+            res.status(500).json(err);
+        }
+    },
+
     // Delete blog post
     deletePost: async (req, res) => {
         try {

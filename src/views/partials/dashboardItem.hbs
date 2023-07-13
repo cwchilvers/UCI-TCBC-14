@@ -2,11 +2,11 @@
 <div class="item" data-value="{{id}}">
     <div class="item-main">
         <div class="item-header">
-            <a href="/{{id}}"><h2>{{title}}</h2></a>
+            <a href="/post/{{id}}"><h2 class="item-title">{{title}}</h2></a>
         </div>
         <div class="item-buttons">
             <a class="edit-button"><img src="img/edit.svg"></a>
-            <a class="delete-button" data-post-id="{{id}}"><img src="img/delete.svg"></a>
+            <a class="delete-button"><img src="img/delete.svg"></a>
         </div>
     </div>
     <p class="item-info">Posted {{createdAt.formattedDate}} at {{createdAt.formattedTime}}</p>

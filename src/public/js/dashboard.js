@@ -1,9 +1,8 @@
-// Delete post handler
 const deletePostHandler = async (event) => {
     event.preventDefault();
 
-    // Check if the clicked element or its parent is the delete button
-    if (event.target.matches('.delete-button') || event.target.parentElement.matches('.delete-button')) {
+    // Check if the clicked element's <img> parent (<a>) is the delete button
+    if (event.target.parentElement.matches('.delete-button')) {
         // Get the post ID from the data attribute
         const postId = event.target.closest('.item').dataset.value;
 
@@ -17,7 +16,7 @@ const deletePostHandler = async (event) => {
                 event.target.closest('.item').remove();
             } else {
                 // Display an error message
-                alert('Failed to delete the post.');
+                alert('Failed to delete post.');
             }
         } catch (error) {
             console.log(error);
@@ -27,5 +26,19 @@ const deletePostHandler = async (event) => {
     }
 };
 
+const editPostHandler = async (event) => {
+    event.preventDefault();
+
+    // Check if the clicked element's <img> parent (<a>) is the edit button
+    if (event.target.parentElement.matches('.edit-button')) {
+        // Get the post ID from the data attribute
+        const postId = event.target.closest('.item').dataset.value;
+
+        // Go to the edit post page
+        document.location.replace(`/post/${postId}/edit`);
+    }
+};
+
 // Attach the event listener to the #dashboard-container using event delegation
 document.querySelector('#dashboard-container').addEventListener('click', deletePostHandler);
+document.querySelector('#dashboard-container').addEventListener('click', editPostHandler);

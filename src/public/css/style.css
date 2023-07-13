@@ -164,19 +164,24 @@ textarea {
 }
 
 /* New Post Form */
-#new-post-form {
+#post-form {
     height: 200px;
     width: 500px;
     display: flex; align-items: center; justify-content: center; 
     flex-direction: column; gap: 10px;
 }
 
-
-#new-post-form input{
+#post-form input{
     width: 398px;
 }
 
 /* Dashboard Item */
+#dashboard-container {
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 20px;
+    width: 100%; max-width: 1150px;
+}
+
 .item {
     background-color: var(--rust);
     width: 700px;
