@@ -247,6 +247,16 @@ textarea {
     display: flex; align-items: center; justify-content: center; flex-direction: column;
 }
 
+.sign-up-form label {
+    font-weight: bold;
+}
+
+.sign-up-form :nth-child(3) {
+    padding-top: 15px;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+}
+
+
 /* Body */
 body {
     background-color: var(--white);
