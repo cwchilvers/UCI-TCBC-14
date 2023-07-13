@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
             where: { user_id: req.session.userId }, 
             include: User,
             order: [['createdAt', 'DESC']], 
-            attributes: ['id', 'title', 'content', 'createdAt'],
+            attributes: ['id', 'title', 'createdAt'],
             raw: true,  
             nest: true   
         });

@@ -93,8 +93,7 @@ nav a {
 .blog-post {
     background-color: var(--darkWhite);
     width: 700px;
-    border-width: 2px; border-style: solid; border-color: var(--black);
-    border-radius: 5px;
+    border-width: 1px; border-style: solid; border-color: var(--black);
 }
 
 .blog-post-header {
@@ -176,6 +175,50 @@ textarea {
 #new-post-form input{
     width: 398px;
 }
+
+/* Dashboard Item */
+.item {
+    background-color: var(--rust);
+    width: 700px;
+    height: 70px;
+}
+
+.item-main {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex; align-items: center; flex-direction: row;
+    width: 100%;
+    height: 45px;
+}
+
+.item-header {
+    padding-left: 20px;
+    width: 590px;
+    height: 100%;
+    display: flex; align-items: center;
+}
+
+.item-buttons {
+    display: flex; align-items: center; justify-content: center;
+    gap: 20px;
+    width: calc(700px - 590px);
+    height: 100%
+}
+
+.item img {
+    height: 25px; width: 25px;
+    cursor: pointer;
+}
+
+.item-info {
+    color: var(--white);
+    margin: 0;
+    font-size: 14px;
+    height: calc(60px - 35px);
+    display: flex; align-items: center;
+    padding-left: 20px;
+}
+
 
 /* Body */
 body {
