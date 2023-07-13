@@ -47,6 +47,7 @@ module.exports = async (req, res) => {
             loggedIn: req.session.loggedIn,
             post: formattedPost,
             comments: formattedComments, 
+            postId: req.params.id
         });
 
     } catch (error) {
