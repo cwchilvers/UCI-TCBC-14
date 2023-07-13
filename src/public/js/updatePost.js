@@ -2,7 +2,7 @@ const updatePostHandler = async (event) => {
     event.preventDefault();
 
     const title = document.querySelector('#title').value.trim();
-    const content = document.querySelector('#content').value.trim();
+    const content = document.querySelector('#content').value.replace(/\r?\n/g, '<br>').trim();
 
     // Get the post ID from the data attribute
     const postId = event.target.closest('#post-form').dataset.value;

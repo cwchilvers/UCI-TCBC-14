@@ -1,7 +1,7 @@
 const newCommentHandler = async (event) => {
     event.preventDefault();
 
-    const content = document.querySelector('#content').value.trim();
+    const content = document.querySelector('#content').value.replace(/\r?\n/g, '<br>').trim();
     const post_id = document.querySelector('#post-id').value;
 
     console.log(content, post_id);

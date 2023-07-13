@@ -30,6 +30,7 @@ const hbs = exphbs.create({
     extname: 'hbs',
     partialsDir: path.join(__dirname, 'views', 'partials')
 });
+
 app
     .engine('hbs', hbs.engine)
     .set('view engine', 'hbs')
