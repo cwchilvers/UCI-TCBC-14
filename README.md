@@ -1,4 +1,4 @@
-# Basic-Tech-Blog
+# Basic Tech Blog
 
 ## Table of Contents
 * [Description](#description)
