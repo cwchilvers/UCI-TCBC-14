@@ -121,7 +121,7 @@ nav a {
 .blog-post-content {
     width: calc(100% - 40px);
     padding: 0 20px;
-    word-break:break-all;
+    word-break: break-word;
 }
 
 /* Comment */
@@ -149,7 +149,7 @@ nav a {
 .comment-content {
     width: calc(100% - 40px);
     padding: 0 20px;
-    word-break:break-all;
+    word-break: break-word;
 }
 
 /* New Comment */
